@@ -1,0 +1,14 @@
+{
+    "name": "rocketcode/async-status",
+    "description": "Allows for ajax status checks of long running jobs.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocketcode Fullstack Team",
+            "email": "fullstack@rocketcode.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
