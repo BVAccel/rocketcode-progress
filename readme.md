@@ -1,9 +1,11 @@
 <h2 align="center">
-   <img src="https://raw.githubusercontent.com/RocketCodeHQ/logos/master/rc-logo.png"> Rocketcode Progress
+   <img src="https://raw.githubusercontent.com/RocketCodeHQ/logos/master/rc-logo.png"><br>Progress
 </h2>
 
 <p align="center">
-    <a href="https://styleci.io/repos/92856894"><img src="https://styleci.io/repos/92856894/shield?branch=master" alt="StyleCI"></a>
+    <a href="https://styleci.io/repos/92856894">
+        <img src="https://styleci.io/repos/92856894/shield?branch=master" alt="StyleCI">
+    </a>
 </p>
 
 ## Introduction
