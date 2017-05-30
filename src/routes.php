@@ -1,4 +1,3 @@
 <?php
 
-Route::get( "/status/{progress}", 'Controllers\ProgressController@status');
-
+Route::get('/status/{progress}', 'Controllers\ProgressController@status');
