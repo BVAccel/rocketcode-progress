@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateProgressJobTable extends Migration
 {
@@ -15,7 +15,7 @@ class CreateProgressJobTable extends Migration
     public function up()
     {
         $this->config = config('rocketcode-progress');
-        if (!Schema::hasTable($this->config['table_name'])) {
+        if (! Schema::hasTable($this->config['table_name'])) {
             Schema::create($this->config['table_name'], function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('status')->default('Queued');
