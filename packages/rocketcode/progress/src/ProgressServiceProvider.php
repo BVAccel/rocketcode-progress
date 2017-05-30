@@ -1,10 +1,10 @@
 <?php
 
-namespace Rocketcode\AsyncStatus;
+namespace Rocketcode\Progress;
 
 use Illuminate\Support\ServiceProvider;
 
-class AsyncStatusServiceProvider extends ServiceProvider {
+class ProgressServiceProvider extends ServiceProvider {
 	/**
 	 * Bootstrap the application services.
 	 *
@@ -12,7 +12,8 @@ class AsyncStatusServiceProvider extends ServiceProvider {
 	 */
 	public function boot() {
 		$this->publishes( [
-			__DIR__.'/database/migrations' => base_path( 'database/migrations' )
+			__DIR__.'/config' => base_path( 'config' ),
+			__DIR__.'/database/migrations' => base_path( 'database/migrations' ),
 		] );
 	}
 
@@ -23,6 +24,6 @@ class AsyncStatusServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 		include __DIR__ . '/routes.php';
-		$this->app->make( 'Rocketcode\AsyncStatus\Controller\AsyncStatusController' );
+		$this->app->make( 'Rocketcode\Progress\Controller\ProgressController' );
 	}
 }

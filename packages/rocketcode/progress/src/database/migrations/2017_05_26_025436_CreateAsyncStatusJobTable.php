@@ -4,18 +4,25 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
 class CreateAsyncStatusJobTable extends Migration {
+
+	private $config;
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
 	public function up() {
-		if( !Schema::hasTable( 'async_status_job_tracker') ) {
-			Schema::create( 'async_status_job_tracker', function ( Blueprint $table ) {
+		$this->config( 'async-status' );
+		if( !Schema::hasTable( $this->config['table_name'] ) ) {
+			Schema::create( $this->config['table_name'], function ( Blueprint $table ) {
+
 				$table->increments( 'id' );
 				$table->string( 'status' )->default( 'Queued' );
 				$table->string( 'job_id' );
 				$table->timestamps();
+
+				if( $this->config['use_soft_deletes'] )
+					$table->softDeletes();
 
 				$table->index( 'job_id' );
 			} );
@@ -28,6 +35,6 @@ class CreateAsyncStatusJobTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop( 'async_status_job_tracker' );
+		Schema::drop( $this->config['table_name'] );
 	}
 }

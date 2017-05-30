@@ -1,5 +1,5 @@
 {
-    "name": "rocketcode/async-status",
+    "name": "rocketcode/progress",
     "description": "Allows for ajax status checks of long running jobs.",
     "type": "library",
     "license": "MIT",

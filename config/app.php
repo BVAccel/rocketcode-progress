@@ -177,7 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-	    Rocketcode\AsyncStatus\AsyncStatusServiceProvider::class,
+	    Rocketcode\Progress\ProgressServiceProvider::class,
 
     ],
 
