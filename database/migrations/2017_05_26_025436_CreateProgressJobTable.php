@@ -3,16 +3,17 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateAsyncStatusJobTable extends Migration {
+class CreateProgressJobTable extends Migration {
 
 	private $config;
+
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
 	public function up() {
-		$this->config( 'async-status' );
+		$this->config = config( 'rocketcode-progress' );
 		if( !Schema::hasTable( $this->config['table_name'] ) ) {
 			Schema::create( $this->config['table_name'], function ( Blueprint $table ) {
 
@@ -35,6 +36,7 @@ class CreateAsyncStatusJobTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
+		$this->config = config( 'rocketcode-progress' );
 		Schema::drop( $this->config['table_name'] );
 	}
 }
