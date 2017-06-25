@@ -9,7 +9,7 @@
             "email": "fullstack@rocketcode.io"
         }
     ],
-    keywords : [
+    "keywords" : [
       "laravel",
       "progress",
       "job",
@@ -19,6 +19,11 @@
     "require": {
       "php": ">=7.0",
       "laravel/framework": "5.4.*"
+    },
+    "require-dev": {
+      "orchestra/testbench": "~3.0",
+      "phpunit/phpunit": "^6.1",
+      "laravel/tinker": "^1.0"
     },
     "autoload": {
       "psr-4": {
