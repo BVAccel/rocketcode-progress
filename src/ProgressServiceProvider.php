@@ -2,14 +2,14 @@
 
 namespace Rocketcode\Progress;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Queue\Events\JobFailed;
-use Illuminate\Queue\Events\JobProcessed;
-use Illuminate\Queue\Events\JobProcessing;
+use Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Support\ServiceProvider;
-use Log;
+use Illuminate\Queue\Events\JobProcessed;
+use Illuminate\Queue\Events\JobProcessing;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ProgressServiceProvider extends ServiceProvider
 {
