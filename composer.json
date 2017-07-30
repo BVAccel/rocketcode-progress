@@ -15,10 +15,9 @@
       "job",
       "status"
     ],
-    "minimum-stability": "dev",
     "require": {
       "php": ">=7.0",
-      "laravel/framework": "5.4.*"
+      "laravel/framework": "^5.4"
     },
     "require-dev": {
       "orchestra/testbench": "~3.0",
