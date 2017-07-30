@@ -18,7 +18,7 @@ This package is open-sourced software licensed under the [MIT license](http://op
 Install Progress as you would with any other dependency managed by Composer:
 
 ```bash
-$ composer require rocketcode/progress
+$ composer require rocketcodehq/progress
 ```
 
 ### Configuration

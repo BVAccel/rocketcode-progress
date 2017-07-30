@@ -1,5 +1,5 @@
 {
-    "name": "rocketcode/progress",
+    "name": "rocketcodehq/progress",
     "description": "Drop-in solution for exposing an ajax endpoint for status checks of long running jobs.",
     "type": "library",
     "license": "MIT",
